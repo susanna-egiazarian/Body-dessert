@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Body Dessert — Indulge Your Skin, Nourish Your Soul</title>
     <meta name="description" content="Body Dessert offers premium vanilla tobacco oil elixirs, shimmer buttercreams, and handcrafted soap. Sweet luxury for your skin.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -47,18 +47,54 @@
             gap: 20px;
         }
 
+        /* LUXURIOUS LOGO */
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #E8A4A8;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #D47A7F;
             text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 1px 2px rgba(212,122,127,0.1);
+        }
+        
+        .logo::before {
+            content: '✦';
+            font-size: 1.2rem;
+            position: absolute;
+            left: -28px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #E8A4A8;
+            opacity: 0.7;
             transition: all 0.3s;
         }
+        
+        .logo::after {
+            content: '✦';
+            font-size: 1.2rem;
+            position: absolute;
+            right: -28px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #E8A4A8;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        
         .logo:hover {
+            letter-spacing: 5px;
+            color: #C8656A;
+            text-shadow: 0 0 8px rgba(212,122,127,0.3);
+        }
+        
+        .logo:hover::before,
+        .logo:hover::after {
+            opacity: 1;
             color: #D47A7F;
-            transform: scale(1.02);
         }
 
         .nav-links {
@@ -70,33 +106,38 @@
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
             color: #8B6B5E;
             transition: all 0.3s;
+            text-transform: uppercase;
         }
         .nav-links a:hover {
-            color: #E8A4A8;
+            color: #D47A7F;
+            letter-spacing: 2px;
         }
         .cart-icon {
             position: relative;
             font-size: 1.3rem;
-            color: #E8A4A8;
+            color: #D47A7F;
             cursor: pointer;
+            transition: 0.3s;
         }
         .cart-icon:hover {
-            color: #D47A7F;
+            color: #C8656A;
+            transform: scale(1.05);
         }
         .cart-count {
             position: absolute;
             top: -8px;
             right: -12px;
-            background: #E8A4A8;
+            background: #D47A7F;
             color: white;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 600;
             padding: 2px 6px;
             border-radius: 20px;
+            font-family: 'Inter', sans-serif;
         }
 
         /* Hero Section */
@@ -112,7 +153,8 @@
             margin: 0 auto 30px;
             border-radius: 40px;
             overflow: hidden;
-            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.1);
+            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.12);
+            border: 1px solid rgba(232,164,168,0.3);
         }
         .hero-image img {
             width: 100%;
@@ -121,8 +163,8 @@
             object-fit: cover;
         }
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
             font-weight: 600;
             color: #D47A7F;
             margin-bottom: 16px;
@@ -132,35 +174,40 @@
             font-size: 1.1rem;
             color: #A88B7E;
             margin-bottom: 32px;
+            font-weight: 400;
         }
         .btn-primary {
-            background: #E8A4A8;
+            background: #D47A7F;
             color: white;
             padding: 14px 42px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             transition: all 0.3s;
             display: inline-block;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(232,164,168,0.3);
+            box-shadow: 0 4px 12px rgba(212,122,127,0.3);
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
         .btn-primary:hover {
-            background: #D47A7F;
+            background: #C8656A;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(232,164,168,0.4);
+            box-shadow: 0 8px 20px rgba(212,122,127,0.4);
+            letter-spacing: 2.5px;
         }
 
         /* Section Titles */
         .section-title {
             text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
             font-weight: 600;
             color: #D47A7F;
             margin: 70px 0 16px;
+            letter-spacing: 1px;
         }
         .section-sub {
             text-align: center;
@@ -201,7 +248,7 @@
             position: absolute;
             top: 16px;
             right: 16px;
-            background: rgba(232,164,168,0.9);
+            background: rgba(212,122,127,0.9);
             backdrop-filter: blur(4px);
             color: white;
             font-size: 0.7rem;
@@ -215,8 +262,8 @@
             text-align: center;
         }
         .product-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
             font-weight: 600;
             color: #5C3A2E;
             margin-bottom: 8px;
@@ -230,13 +277,13 @@
         .product-price {
             font-size: 1.2rem;
             font-weight: 600;
-            color: #E8A4A8;
+            color: #D47A7F;
             margin-bottom: 16px;
         }
         .btn-add {
             background: transparent;
-            border: 1.5px solid #E8A4A8;
-            color: #E8A4A8;
+            border: 1.5px solid #D47A7F;
+            color: #D47A7F;
             padding: 10px 24px;
             border-radius: 40px;
             font-weight: 600;
@@ -246,7 +293,7 @@
             width: 100%;
         }
         .btn-add:hover {
-            background: #E8A4A8;
+            background: #D47A7F;
             color: white;
             transform: scale(1.02);
         }
@@ -260,8 +307,9 @@
             text-align: center;
         }
         .about h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
             color: #D47A7F;
             margin-bottom: 20px;
         }
@@ -281,8 +329,9 @@
             margin: 60px 0 80px;
         }
         .newsletter h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
             color: #D47A7F;
             margin-bottom: 12px;
         }
@@ -305,11 +354,11 @@
             transition: 0.3s;
         }
         .newsletter-form input:focus {
-            border-color: #E8A4A8;
-            box-shadow: 0 0 0 3px rgba(232,164,168,0.1);
+            border-color: #D47A7F;
+            box-shadow: 0 0 0 3px rgba(212,122,127,0.1);
         }
         .btn-secondary {
-            background: #E8A4A8;
+            background: #D47A7F;
             color: white;
             padding: 14px 32px;
             border-radius: 50px;
@@ -317,9 +366,12 @@
             font-weight: 600;
             cursor: pointer;
             transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
         }
         .btn-secondary:hover {
-            background: #D47A7F;
+            background: #C8656A;
             transform: translateY(-2px);
         }
 
@@ -344,27 +396,29 @@
         .footer-links a {
             text-decoration: none;
             color: #A88B7E;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: 0.3s;
+            letter-spacing: 1px;
         }
         .footer-links a:hover {
-            color: #E8A4A8;
+            color: #D47A7F;
         }
         .social-icons i {
             font-size: 1.3rem;
             margin-left: 24px;
-            color: #E8A4A8;
+            color: #D47A7F;
             transition: 0.3s;
         }
         .social-icons i:hover {
-            color: #D47A7F;
+            color: #C8656A;
             transform: translateY(-3px);
         }
         .copyright {
             text-align: center;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #C4A79A;
             padding-top: 24px;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 768px) {
@@ -375,6 +429,8 @@
             .footer-grid { flex-direction: column; text-align: center; }
             .footer-links { justify-content: center; }
             .social-icons i { margin: 0 12px; }
+            .logo::before, .logo::after { display: none; }
+            .logo { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -395,7 +451,7 @@
     </div>
 </header>
 
-<!-- Hero Section with Vanilla Cake Shimmer Body Scrub as first image -->
+<!-- Hero Section with Vanilla Cake Shimmer Body Scrub -->
 <div class="hero">
     <div class="container">
         <div class="hero-image">
@@ -519,7 +575,6 @@
 
 <!-- Simple cart counter demo -->
 <script>
-    // Simple cart counter for demo
     let cartCount = 0;
     const cartCountElement = document.querySelector('.cart-count');
     const addButtons = document.querySelectorAll('.btn-add');
@@ -528,7 +583,6 @@
         button.addEventListener('click', () => {
             cartCount++;
             cartCountElement.textContent = cartCount;
-            // Optional: add a little animation feedback
             button.textContent = '✓ Added';
             setTimeout(() => {
                 button.textContent = 'Add to Bag';
