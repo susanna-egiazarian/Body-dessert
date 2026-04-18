@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Body Dessert — Vanilla Melts on Skin Like a Warm Dessert | Slideshow Gallery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Body Dessert — Indulge Your Skin, Nourish Your Soul</title>
+    <meta name="description" content="Body Dessert offers premium vanilla tobacco oil elixirs, shimmer buttercreams, and handcrafted soap. Sweet luxury for your skin.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -15,52 +16,27 @@
 
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background: #0a0806;
-            color: #2C1A12;
+            background: linear-gradient(135deg, #FFF9F5 0%, #FFF5EE 100%);
+            color: #5C3A2E;
             line-height: 1.5;
             scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        /* custom cursor */
-        .custom-cursor {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #C67A42;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: 0.1s ease;
-            transform: translate(-50%, -50%);
-            backdrop-filter: invert(0.2);
-            mix-blend-mode: difference;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 32px;
         }
 
-        /* luxury header - cinematic glassmorphism */
+        /* Header */
         header {
             padding: 20px 0;
-            background: rgba(10, 8, 6, 0.75);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(198, 122, 66, 0.3);
-            position: fixed;
+            background: rgba(255, 249, 245, 0.92);
+            backdrop-filter: blur(12px);
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        }
-
-        header.scrolled {
-            padding: 12px 0;
-            background: rgba(10, 8, 6, 0.92);
-            border-bottom-color: rgba(198, 122, 66, 0.6);
+            z-index: 100;
+            border-bottom: 1px solid rgba(232, 180, 184, 0.3);
         }
 
         .header-flex {
@@ -72,543 +48,449 @@
         }
 
         .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
             font-weight: 700;
-            letter-spacing: 3px;
-            color: #F5E6D3;
+            letter-spacing: 1px;
+            color: #E8A4A8;
             text-decoration: none;
-            transition: all 0.4s;
-            text-shadow: 0 0 15px rgba(198,122,66,0.3);
+            transition: all 0.3s;
         }
         .logo:hover {
-            letter-spacing: 5px;
-            text-shadow: 0 0 25px rgba(198,122,66,0.6);
+            color: #D47A7F;
+            transform: scale(1.02);
         }
 
         .nav-links {
             display: flex;
-            gap: 42px;
+            gap: 36px;
+            align-items: center;
             flex-wrap: wrap;
         }
         .nav-links a {
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            color: #E8D9CC;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            color: #8B6B5E;
             transition: all 0.3s;
-            text-transform: uppercase;
-            position: relative;
-        }
-        .nav-links a::before {
-            content: '✦';
-            position: absolute;
-            left: -15px;
-            opacity: 0;
-            transition: 0.3s;
-            color: #C67A42;
-        }
-        .nav-links a:hover::before {
-            opacity: 1;
-            left: -20px;
         }
         .nav-links a:hover {
-            color: #C67A42;
-            letter-spacing: 2.5px;
+            color: #E8A4A8;
+        }
+        .cart-icon {
+            position: relative;
+            font-size: 1.3rem;
+            color: #E8A4A8;
+            cursor: pointer;
+        }
+        .cart-icon:hover {
+            color: #D47A7F;
+        }
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: #E8A4A8;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 20px;
         }
 
-        /* HERO SECTION with slideshow */
+        /* Hero Section */
         .hero {
-            min-height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 80px 0 100px;
             text-align: center;
+            background: linear-gradient(145deg, #FFF5EE 0%, #FFEFE6 100%);
+            border-radius: 0 0 60px 60px;
+            margin-bottom: 20px;
+        }
+        .hero-image {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            border-radius: 40px;
             overflow: hidden;
-            background: #0a0806;
+            box-shadow: 0 25px 45px -15px rgba(0,0,0,0.1);
         }
-
-        .hero-bg {
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 30% 40%, #2a1a10 0%, #0a0806 70%);
-            animation: slowDrift 20s infinite alternate;
-        }
-
-        @keyframes slowDrift {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(2%, 1%) scale(1.05); }
-        }
-
-        /* SLIDESHOW CONTAINER */
-        .slideshow-container {
-            position: relative;
-            width: 80%;
-            max-width: 900px;
-            margin: 0 auto;
-            z-index: 10;
-        }
-
-        /* THE FRAME - elegant gold border */
-        .photo-frame {
-            position: relative;
-            background: rgba(20, 16, 14, 0.6);
-            backdrop-filter: blur(8px);
-            padding: 20px;
-            border: 2px solid rgba(198, 122, 66, 0.5);
-            box-shadow: 0 0 50px rgba(198, 122, 66, 0.2), inset 0 0 30px rgba(198, 122, 66, 0.05);
-            border-radius: 4px;
-            transition: all 0.5s;
-        }
-
-        .photo-frame:hover {
-            border-color: rgba(198, 122, 66, 0.9);
-            box-shadow: 0 0 80px rgba(198, 122, 66, 0.3);
-        }
-
-        /* gold corner ornaments */
-        .photo-frame::before,
-        .photo-frame::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border-color: #C67A42;
-            border-style: solid;
-            border-width: 0;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        .photo-frame::before {
-            top: 15px;
-            left: 15px;
-            border-top-width: 2px;
-            border-left-width: 2px;
-        }
-
-        .photo-frame::after {
-            bottom: 15px;
-            right: 15px;
-            border-bottom-width: 2px;
-            border-right-width: 2px;
-        }
-
-        .frame-corner-right-top {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 40px;
-            height: 40px;
-            border-top-width: 2px;
-            border-right-width: 2px;
-            border-color: #C67A42;
-            border-style: solid;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        .frame-corner-left-bottom {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            width: 40px;
-            height: 40px;
-            border-bottom-width: 2px;
-            border-left-width: 2px;
-            border-color: #C67A42;
-            border-style: solid;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        .slide-img {
+        .hero-image img {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
+            height: auto;
             display: block;
-            transition: transform 0.5s;
-            filter: brightness(0.98) contrast(1.02);
+            object-fit: cover;
         }
-
-        .photo-frame:hover .slide-img {
-            transform: scale(1.01);
-        }
-
-        /* navigation arrows */
-        .slide-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(10, 8, 6, 0.7);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(198, 122, 66, 0.5);
-            color: #C67A42;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            transition: all 0.3s;
-            z-index: 20;
-        }
-
-        .slide-arrow:hover {
-            background: rgba(198, 122, 66, 0.2);
-            border-color: #C67A42;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .prev-arrow {
-            left: -70px;
-        }
-
-        .next-arrow {
-            right: -70px;
-        }
-
-        /* dots navigation */
-        .dots-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-            z-index: 10;
-            position: relative;
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: rgba(198, 122, 66, 0.3);
-            border: 1px solid rgba(198, 122, 66, 0.5);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .dot.active {
-            background: #C67A42;
-            transform: scale(1.3);
-            box-shadow: 0 0 10px rgba(198, 122, 66, 0.6);
-        }
-
-        .dot:hover {
-            background: rgba(198, 122, 66, 0.7);
-            transform: scale(1.2);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            padding: 100px 20px 60px;
-        }
-
-        .hero-subtitle {
-            font-size: 0.8rem;
-            letter-spacing: 8px;
-            color: #C67A42;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease;
-        }
-
         .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             font-weight: 600;
-            color: #F5E6D3;
-            margin-bottom: 30px;
-            line-height: 1.2;
-            text-shadow: 0 0 30px rgba(198,122,66,0.2);
-            animation: fadeInUp 1s ease 0.2s backwards;
+            color: #D47A7F;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
         }
-
-        .hero-cta {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            animation: fadeInUp 1s ease 0.6s backwards;
+        .hero p {
+            font-size: 1.1rem;
+            color: #A88B7E;
+            margin-bottom: 32px;
         }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .btn-primary {
-            background: transparent;
-            border: 2px solid #C67A42;
-            color: #C67A42;
+            background: #E8A4A8;
+            color: white;
             padding: 14px 42px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            transition: all 0.5s;
+            letter-spacing: 1px;
+            transition: all 0.3s;
             display: inline-block;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(232,164,168,0.3);
         }
-
         .btn-primary:hover {
-            background: #C67A42;
-            color: #0a0806;
-            letter-spacing: 6px;
-            box-shadow: 0 0 30px rgba(198,122,66,0.5);
+            background: #D47A7F;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(232,164,168,0.4);
         }
 
-        .btn-secondary {
-            background: rgba(198,122,66,0.15);
-            border: 1px solid rgba(198,122,66,0.5);
-            color: #E8D9CC;
-            padding: 14px 42px;
-            text-decoration: none;
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            transition: all 0.4s;
-            backdrop-filter: blur(5px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(198,122,66,0.3);
-            letter-spacing: 5px;
-        }
-
-        /* floating particles */
-        .floating-particle {
-            position: absolute;
-            background: radial-gradient(circle, rgba(198,122,66,0.3), transparent);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float 12s infinite ease-in-out;
-            z-index: 2;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
-            25% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
-            75% { transform: translateY(15px) translateX(-10px) rotate(-3deg); }
-        }
-
-        /* products section */
+        /* Section Titles */
         .section-title {
             text-align: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 500;
-            margin: 100px 0 20px;
-            color: #E8D9CC;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #D47A7F;
+            margin: 70px 0 16px;
+        }
+        .section-sub {
+            text-align: center;
+            color: #B89B8E;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 0.95rem;
         }
 
+        /* Product Grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 50px;
-            margin: 60px 0;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 40px 0 60px;
         }
-
         .product-card {
-            background: rgba(20, 16, 14, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(198,122,66,0.2);
-            transition: all 0.5s;
-            text-align: center;
-            padding-bottom: 30px;
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            border: 1px solid rgba(232,180,184,0.3);
         }
-
         .product-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(198,122,66,0.6);
+            transform: translateY(-8px);
+            box-shadow: 0 24px 40px -12px rgba(212,122,127,0.2);
+            border-color: rgba(232,164,168,0.5);
         }
-
         .product-img {
-            height: 350px;
+            height: 300px;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
         }
-
-        .product-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
-            color: #F5E6D3;
-            margin: 20px 0 10px;
-        }
-
-        .product-type {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #C67A42;
-        }
-
-        .btn-shop {
-            display: inline-block;
-            margin-top: 20px;
-            color: #C67A42;
-            text-decoration: none;
-            letter-spacing: 2px;
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(232,164,168,0.9);
+            backdrop-filter: blur(4px);
+            color: white;
             font-size: 0.7rem;
-            text-transform: uppercase;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
         }
-
-        footer {
-            border-top: 1px solid rgba(198,122,66,0.2);
-            padding: 60px 0 40px;
-            background: #0a0806;
-            margin-top: 80px;
+        .product-info {
+            padding: 24px 20px 28px;
+            text-align: center;
         }
-
-        .social-icons a {
-            margin-left: 30px;
-            display: inline-block;
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #5C3A2E;
+            margin-bottom: 8px;
+        }
+        .product-desc {
+            font-size: 0.85rem;
+            color: #A88B7E;
+            margin: 12px 0 16px;
+            line-height: 1.5;
+        }
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #E8A4A8;
+            margin-bottom: 16px;
+        }
+        .btn-add {
+            background: transparent;
+            border: 1.5px solid #E8A4A8;
+            color: #E8A4A8;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            cursor: pointer;
             transition: all 0.3s;
+            width: 100%;
+        }
+        .btn-add:hover {
+            background: #E8A4A8;
+            color: white;
+            transform: scale(1.02);
         }
 
-        .social-icons a:hover {
-            transform: translateY(-5px);
+        /* About Section */
+        .about {
+            background: #FFF5EE;
+            border-radius: 48px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            text-align: center;
+        }
+        .about h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D47A7F;
+            margin-bottom: 20px;
+        }
+        .about p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: #8B6B5E;
+            line-height: 1.7;
         }
 
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, #FFF0E8 0%, #FFE8E0 100%);
+            border-radius: 48px;
+            padding: 60px 32px;
+            text-align: center;
+            margin: 60px 0 80px;
+        }
+        .newsletter h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #D47A7F;
+            margin-bottom: 12px;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            max-width: 500px;
+            margin: 30px auto 0;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 24px;
+            border-radius: 50px;
+            border: 1px solid #F0D5CC;
+            background: white;
+            font-size: 0.9rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .newsletter-form input:focus {
+            border-color: #E8A4A8;
+            box-shadow: 0 0 0 3px rgba(232,164,168,0.1);
+        }
+        .btn-secondary {
+            background: #E8A4A8;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-secondary:hover {
+            background: #D47A7F;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(232,180,184,0.4);
+            padding: 50px 0 30px;
+            background: #FFF9F5;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #A88B7E;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+        .footer-links a:hover {
+            color: #E8A4A8;
+        }
         .social-icons i {
             font-size: 1.3rem;
-            color: #B47C54;
+            margin-left: 24px;
+            color: #E8A4A8;
+            transition: 0.3s;
         }
-
+        .social-icons i:hover {
+            color: #D47A7F;
+            transform: translateY(-3px);
+        }
         .copyright {
             text-align: center;
-            font-size: 0.7rem;
-            margin-top: 50px;
-            color: #5A4A3E;
+            font-size: 0.75rem;
+            color: #C4A79A;
+            padding-top: 24px;
         }
 
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
-            .hero h1 { font-size: 2.2rem; }
-            .slideshow-container { width: 95%; }
-            .slide-arrow { width: 40px; height: 40px; }
-            .prev-arrow { left: -20px; }
-            .next-arrow { right: -20px; }
-            .slide-img { height: 350px; }
-            .photo-frame { padding: 12px; }
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; margin-top: 50px; }
+            .products-grid { gap: 24px; }
+            .footer-grid { flex-direction: column; text-align: center; }
+            .footer-links { justify-content: center; }
+            .social-icons i { margin: 0 12px; }
         }
     </style>
 </head>
 <body>
 
-<div class="custom-cursor" id="cursor"></div>
-
-<header id="header">
+<header>
     <div class="container header-flex">
         <a href="#" class="logo">BODY DESSERT</a>
         <div class="nav-links">
-            <a href="#">Atelier</a>
-            <a href="#">Elixirs</a>
-            <a href="#">Buttercreams</a>
-            <a href="#">Savon</a>
-            <a href="https://www.instagram.com/body__dessert" target="_blank">Instagram</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
         </div>
     </div>
 </header>
 
-<!-- HERO WITH SLIDESHOW -->
+<!-- Hero Section -->
 <div class="hero">
-    <div class="hero-bg"></div>
-    
-    <div class="floating-particle" style="width: 150px; height: 150px; top: 15%; left: 5%; opacity: 0.12; animation-duration: 18s;"></div>
-    <div class="floating-particle" style="width: 80px; height: 80px; bottom: 20%; right: 8%; opacity: 0.15; animation-duration: 14s;"></div>
-    <div class="floating-particle" style="width: 200px; height: 200px; bottom: 5%; left: 15%; opacity: 0.08; animation-duration: 22s;"></div>
-    
-    <div class="hero-content">
-        <div class="hero-subtitle">✦ since 2024 ✦</div>
-        <h1>vanilla melts on skin<br>like a warm dessert</h1>
-        
-        <!-- SLIDESHOW WITH FRAME -->
-        <div class="slideshow-container">
-            <div class="photo-frame">
-                <div class="frame-corner-right-top"></div>
-                <div class="frame-corner-left-bottom"></div>
-                <img class="slide-img" id="slideshow-image" src="https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4831.jpg?v=1770473033" alt="Body Dessert product slideshow">
-            </div>
-            
-            <div class="slide-arrow prev-arrow" id="prevSlide">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="slide-arrow next-arrow" id="nextSlide">
-                <i class="fas fa-chevron-right"></i>
-            </div>
+    <div class="container">
+        <div class="hero-image">
+            <img src="https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4831.jpg?v=1770473033" alt="Body Dessert vanilla collection">
         </div>
-        
-        <div class="dots-container" id="dotsContainer"></div>
-        
-        <div class="hero-cta">
-            <a href="#" class="btn-primary">indulge now</a>
-            <a href="https://www.instagram.com/body__dessert" target="_blank" class="btn-secondary">follow the ritual →</a>
-        </div>
+        <h1>Indulge Your Skin,<br>Nourish Your Soul</h1>
+        <p>Sweet-scented body rituals made with love, not calories</p>
+        <a href="#" class="btn-primary">Shop Sweet Treats →</a>
     </div>
 </div>
 
 <div class="container">
-    <div class="section-title">✧ the dessert collection ✧</div>
-    
+    <div class="section-title">✦ our sweet collection ✦</div>
+    <div class="section-sub">Handcrafted vanilla-infused body care that melts into skin like a warm dessert</div>
+
     <div class="products-grid">
+        <!-- Product 1: Vanilla Tobacco -->
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4831.jpg?v=1770473033');"></div>
-            <div class="product-name">Vanilla Tobacco</div>
-            <div class="product-type">Scented Oil Elixir</div>
-            <a href="#" class="btn-shop">Experience →</a>
+            <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4831.jpg?v=1770473033');">
+                <div class="product-badge">Bestseller</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Vanilla Tobacco</div>
+                <div class="product-desc">Deep vanilla bean wrapped in soft tobacco flower — warm, addictive, and lingering like a memory.</div>
+                <div class="product-price">$48</div>
+                <button class="btn-add">Add to Bag</button>
+            </div>
         </div>
+
+        <!-- Product 2: Magic Blossom -->
         <div class="product-card">
             <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0004.jpg?v=1770406815');"></div>
-            <div class="product-name">Magic Blossom</div>
-            <div class="product-type">Natural Body Oil</div>
-            <a href="#" class="btn-shop">Experience →</a>
+            <div class="product-info">
+                <div class="product-name">Magic Blossom</div>
+                <div class="product-desc">Floral infusion with golden glow — silk-touch, luminous, and weightless natural body oil.</div>
+                <div class="product-price">$42</div>
+                <button class="btn-add">Add to Bag</button>
+            </div>
         </div>
+
+        <!-- Product 3: Vanilla Cake Shimmer Buttercream -->
         <div class="product-card">
-            <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0006.jpg?v=1770401187');"></div>
-            <div class="product-name">Vanilla Cake</div>
-            <div class="product-type">Golden Vanilla Oil</div>
-            <a href="#" class="btn-shop">Experience →</a>
+            <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0005.jpg?v=1770406189');">
+                <div class="product-badge">✨ Shimmer</div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Vanilla Cake</div>
+                <div class="product-desc">Whipped shimmer buttercream dusted with pearl — melts into skin with a candlelit glow.</div>
+                <div class="product-price">$52</div>
+                <button class="btn-add">Add to Bag</button>
+            </div>
         </div>
-        <div class="product-card">
-            <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0005.jpg?v=1770406189');"></div>
-            <div class="product-name">Shimmer Buttercream</div>
-            <div class="product-type">Luxury Cream</div>
-            <a href="#" class="btn-shop">Experience →</a>
-        </div>
+
+        <!-- Product 4: Handcrafted Soap -->
         <div class="product-card">
             <div class="product-img" style="background-image: url('https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4835_1.jpg?v=1770641880');"></div>
-            <div class="product-name">Handcrafted Soap</div>
-            <div class="product-type">Artisanal Bar</div>
-            <a href="#" class="btn-shop">Experience →</a>
+            <div class="product-info">
+                <div class="product-name">Handcrafted Soap</div>
+                <div class="product-desc">"A bar of soap, a whisper from another time" — slow-saponified, vanilla-touched, nostalgic.</div>
+                <div class="product-price">$24</div>
+                <button class="btn-add">Add to Bag</button>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- About Section -->
+<div class="container">
+    <div class="about">
+        <h3>✦ dessert for your skin ✦</h3>
+        <p>Body Dessert turns your daily routine into a golden sensory ritual. Inspired by patisserie warmth and vintage poetry, we craft oil elixirs, shimmer creams, and heirloom soaps that celebrate vanilla, blossoms, and quiet sweetness. Cruelty-free, handcrafted in small batches.</p>
+    </div>
+</div>
+
+<!-- Newsletter -->
+<div class="container">
+    <div class="newsletter">
+        <h3>✦ the golden list ✦</h3>
+        <p>Subscribe and receive 10% off your first order + vanilla-scented rituals</p>
+        <div class="newsletter-form">
+            <input type="email" placeholder="your email address">
+            <button class="btn-secondary">Subscribe →</button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
 <footer>
     <div class="container">
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center;">
-            <div style="display: flex; gap: 40px;">
-                <a href="#" style="text-decoration: none; color: #9B7A64; font-size: 0.7rem;">Atelier story</a>
-                <a href="#" style="text-decoration: none; color: #9B7A64; font-size: 0.7rem;">Shipping</a>
-                <a href="#" style="text-decoration: none; color: #9B7A64; font-size: 0.7rem;">Rituals</a>
+        <div class="footer-grid">
+            <div class="footer-links">
+                <a href="#">Atelier Story</a>
+                <a href="#">Shipping & Returns</a>
+                <a href="#">Rituals</a>
+                <a href="#">Contact</a>
             </div>
             <div class="social-icons">
                 <a href="https://www.instagram.com/body__dessert" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -617,104 +499,29 @@
             </div>
         </div>
         <div class="copyright">
-            © 2025 BODY DESSERT — vanilla melts on skin like a warm dessert
+            © 2025 Body Dessert — Indulge Your Skin, Nourish Your Soul
         </div>
     </div>
 </footer>
 
+<!-- Simple cart counter demo -->
 <script>
-    // Sticky header
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-
-    // Custom cursor
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-
-    // ========== SLIDESHOW FUNCTIONALITY ==========
-    const images = [
-        "https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4831.jpg?v=1770473033",
-        "https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0004.jpg?v=1770406815",
-        "https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0006.jpg?v=1770401187",
-        "https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG-20260206-WA0005.jpg?v=1770406189",
-        "https://cdn.shopify.com/s/files/1/0736/6380/7662/files/IMG_4835_1.jpg?v=1770641880"
-    ];
+    // Simple cart counter for demo
+    let cartCount = 0;
+    const cartCountElement = document.querySelector('.cart-count');
+    const addButtons = document.querySelectorAll('.btn-add');
     
-    let currentIndex = 0;
-    const slideImage = document.getElementById('slideshow-image');
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    const dotsContainer = document.getElementById('dotsContainer');
-    
-    // Create dots
-    images.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === currentIndex) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlideshow();
+    addButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            cartCount++;
+            cartCountElement.textContent = cartCount;
+            // Optional: add a little animation feedback
+            button.textContent = '✓ Added';
+            setTimeout(() => {
+                button.textContent = 'Add to Bag';
+            }, 1500);
         });
-        dotsContainer.appendChild(dot);
     });
-    
-    function updateSlideshow() {
-        slideImage.style.opacity = '0';
-        setTimeout(() => {
-            slideImage.src = images[currentIndex];
-            slideImage.style.opacity = '1';
-        }, 200);
-        
-        // Update dots
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach((dot, idx) => {
-            if (idx === currentIndex) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
-    }
-    
-    slideImage.style.transition = 'opacity 0.3s ease';
-    
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlideshow();
-    }
-    
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateSlideshow();
-    }
-    
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    
-    // Auto-slide every 5 seconds
-    let autoSlideInterval = setInterval(nextSlide, 5000);
-    
-    // Pause auto-slide on hover
-    const slideshowContainer = document.querySelector('.slideshow-container');
-    slideshowContainer.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
-    });
-    
-    slideshowContainer.addEventListener('mouseleave', () => {
-        autoSlideInterval = setInterval(nextSlide, 5000);
-    });
-    
-    // Add fade effect on image change
-    slideImage.style.opacity = '1';
 </script>
 </body>
 </html>
