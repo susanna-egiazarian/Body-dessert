@@ -1,1 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Body Dessert — Vanilla Melts on Skin Like a Warm Dessert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #FEF9F0;
+            color: #3E2A24;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(196, 122, 90, 0.15);
+            background: #FEF9F0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+            background-color: rgba(254, 249, 240, 0.92);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #B25D3A;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .logo:hover { color: #8E4528; }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #4F332C;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover { color: #B25D3A; }
+
+        /* buttons */
+        .btn-primary {
+            background: #C47A5A;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 48px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary:hover {
+            background: #A75F3F;
+            transform: scale(1.02);
+            box-shadow: 0 8px 18px rgba(180, 90, 50, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid #C47A5A;
+            color: #C47A5A;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn-outline:hover {
+            background: #C47A5A;
+            color: white;
+        }
+
+        /* hero */
+        .hero {
+            padding: 70px 0 60px;
+            text-align: center;
+            background: linear-gradient(145deg, #FFF4E6 0%, #FEEBDC 100%);
+            border-radius: 0 0 48px 48px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #A15333;
+            max-width: 850px;
+            margin: 0 auto 20px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #6A4236;
+            margin-bottom: 32px;
+        }
+        .hero .sub {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #B66844;
+            font-weight: 500;
+        }
+
+        /* section headings */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 64px 0 16px;
+            color: #3E2A24;
+        }
+        .section-sub {
+            text-align: center;
+            color: #7A5A4F;
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+
+        /* products grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 32px;
+            margin: 20px 0 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 32px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02), 0 6px 6px rgba(0,0,0,0.03);
+            border: 1px solid #F5E4D8;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 36px -12px rgba(120, 60, 30, 0.2);
+            border-color: #EED7C8;
+        }
+        .product-img {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+        }
+        .badge {
+            background: #E8B4B8;
+            color: #4A2E2B;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 30px;
+            margin: 14px;
+            backdrop-filter: blur(2px);
+            background: rgba(232, 180, 184, 0.9);
+            letter-spacing: 0.5px;
+        }
+        .product-info {
+            padding: 20px 20px 24px;
+        }
+        .product-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #3E2A24;
+        }
+        .product-type {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #B66844;
+            margin: 6px 0 8px;
+            font-weight: 500;
+        }
+        .product-desc {
+            font-size: 0.85rem;
+            color: #6F4E42;
+            margin: 10px 0 16px;
+            line-height: 1.4;
+        }
+        .shop-link {
+            font-weight: 600;
+            color: #C47A5A;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+        .shop-link:hover { gap: 10px; color: #9A5233; }
+
+        /* ingredients */
+        .ingredients {
+            background: #FFF6EF;
+            border-radius: 48px;
+            padding: 48px 32px;
+            margin: 64px 0;
+            text-align: center;
+        }
+        .ingredient-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+        }
+        .ingredient-item {
+            background: white;
+            border-radius: 80px;
+            padding: 8px 28px;
+            font-weight: 500;
+            color: #A15333;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            border: 1px solid #F0DECE;
+        }
+
+        /* newsletter */
+        .newsletter {
+            background: #FFF1E6;
+            border-radius: 40px;
+            padding: 56px 32px;
+            text-align: center;
+            margin: 40px 0 64px;
+        }
+        .newsletter h3 {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 500px;
+            margin: 24px auto 0;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 60px;
+            border: 1px solid #E6CFC0;
+            background: white;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+        .newsletter-form input:focus {
+            border-color: #C47A5A;
+        }
+
+        /* footer */
+        footer {
+            border-top: 1px solid #F2E1D4;
+            padding: 48px 0 32px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-links {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #5E3F34;
+        }
+        .social i {
+            font-size: 1.4rem;
+            margin-right: 18px;
+            color: #B25D3A;
+            transition: 0.2s;
+        }
+        .social i:hover { color: #8E4528; }
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #9B7A6C;
+            padding-top: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .header-flex { flex-direction: column; align-items: center; text-align: center; }
+            .nav-links { justify-content: center; gap: 20px; }
+            .products-grid { gap: 20px; }
+            .section-title { font-size: 1.8rem; }
+            .ingredient-list { gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <a href="#" class="logo">BODY DESSERT</a>
+        <div class="nav-links">
+            <a href="#">Shop</a>
+            <a href="#">Oils & Elixirs</a>
+            <a href="#">Buttercreams</a>
+            <a href="#">Soap</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="container">
+            <div class="sub">✨ dessert for your skin ✨</div>
+            <h1>Vanilla melts on skin like a warm dessert</h1>
+            <p>Scented oil elixirs • Shimmer buttercreams • Handcrafted soap</p>
+            <a href="#" class="btn-primary">Shop the Collection →</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">✨ signature indulgences</div>
+        <div class="section-sub">Golden vanilla, tobacco blossom, and whispered nostalgia — each product is handcrafted to turn routine into ritual.</div>
+
+        <div class="products-grid">
+            <!-- 1. Vanilla Tobacco -->
+            <div class="product-card">
+                <div class="product-img" style="background: linear-gradient(135deg, #D4A373, #B57648); background-image: radial-gradient(circle at 10% 20%, rgba(255,245,215,0.3) 2%, transparent 2.5%), linear-gradient(125deg, #E0B081, #C28051);">
+                    <div class="badge">⭐ BESTSELLER</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Vanilla Tobacco</div>
+                    <div class="product-type">Scented Oil Elixir</div>
+                    <div class="product-desc">Deep vanilla bean wrapped in soft tobacco flower — warm, addictive, and lingering like a memory.</div>
+                    <a href="#" class="shop-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- 2. Magic Blossom -->
+            <div class="product-card">
+                <div class="product-img" style="background: linear-gradient(145deg, #F7D9B0, #EDBC8B); background-image: radial-gradient(circle at 80% 30%, rgba(255,215,170,0.6) 1.5%, transparent 2%);">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Magic Blossom</div>
+                    <div class="product-type">Natural Body Oil</div>
+                    <div class="product-desc">Floral infusion with golden glow — absorbs like silk, leaves skin luminous and weightless.</div>
+                    <a href="#" class="shop-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- 3. Vanilla Cake (melting vanilla) -->
+            <div class="product-card">
+                <div class="product-img" style="background: linear-gradient(115deg, #F2D5A5, #E5B87B); background-image: radial-gradient(ellipse at 30% 40%, #FFF0C0 1%, transparent 2%);">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Vanilla Cake</div>
+                    <div class="product-type">Golden Vanilla Body Oil</div>
+                    <div class="product-desc">Golden vanilla melting on skin like a warm dessert — sweet, comforting, edible-scented.</div>
+                    <a href="#" class="shop-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- 4. Vanilla Cake Shimmer Buttercream -->
+            <div class="product-card">
+                <div class="product-img" style="background: linear-gradient(135deg, #F3DFB5, #EBC888); background-image: radial-gradient(circle at 70% 20%, #FFE9B0 2%, transparent 2.5%), repeating-linear-gradient(45deg, rgba(255,220,150,0.2) 0px, rgba(255,220,150,0.2) 2px, transparent 2px, transparent 8px);">
+                    <div class="badge">✨ SHIMMER</div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Vanilla Cake</div>
+                    <div class="product-type">Shimmer Buttercream</div>
+                    <div class="product-desc">Whipped, creamy, dusted with pearl shimmer — melts into skin with a candlelit glow.</div>
+                    <a href="#" class="shop-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <!-- 5. Handcrafted Soap -->
+            <div class="product-card">
+                <div class="product-img" style="background: #EFDCCE; background-image: radial-gradient(circle at 20% 45%, rgba(200,150,110,0.1) 1.5%, transparent 2%), repeating-linear-gradient(90deg, rgba(160,110,70,0.05) 0px, rgba(160,110,70,0.05) 1px, transparent 1px, transparent 12px);">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Handcrafted Soap</div>
+                    <div class="product-type">Artisanal Bar Soap</div>
+                    <div class="product-desc">"A bar of soap, a whisper from another time" — slow-saponified, vanilla-touched, nostalgic.</div>
+                    <a href="#" class="shop-link">Shop Now →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="ingredients">
+            <h3 style="font-size: 1.7rem;">🍯 made from dessert-inspired naturals</h3>
+            <div class="ingredient-list">
+                <span class="ingredient-item">Vanilla Absolute</span>
+                <span class="ingredient-item">Tobacco Flower Extract</span>
+                <span class="ingredient-item">Shea Butter</span>
+                <span class="ingredient-item">Coconut Oil</span>
+                <span class="ingredient-item">Vitamin E</span>
+            </div>
+            <p style="margin-top: 32px; max-width: 580px; margin-left: auto; margin-right: auto;">Cruelty-free • handcrafted in small batches • dessert for your skin, not your stomach</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="about-section" style="margin: 20px 0 20px; text-align: center;">
+            <div class="section-title">about body dessert</div>
+            <div class="section-sub" style="margin-bottom: 20px;">We turn your daily routine into a golden, sensory ritual — each drop and lather feels like slow luxury.</div>
+            <p style="max-width: 700px; margin: 0 auto; color: #6F4E42;">Inspired by patisserie warmth and vintage poetry, Body Dessert crafts oil elixirs, shimmer creams, and heirloom soaps that celebrate vanilla, blossoms, and quiet sweetness. No shortcuts, no artificial loudness — just dessert-like devotion for your skin.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="newsletter">
+            <h3>🍰 get 10% off your first order</h3>
+            <p style="margin-bottom: 8px;">Subscribe and receive golden vanilla updates + sweet surprises</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button class="btn-primary" style="padding: 12px 28px;">Subscribe →</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <a href="#">FAQ</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="social">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-tiktok"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Body Dessert — vanilla melts on skin like a warm dessert
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
